@@ -7,7 +7,7 @@ A simple React component for embedding a post from **X (formerly known as Twitte
 [`postscribe`](https://github.com/krux/postscribe)を使用して、X（旧称Twitter）の投稿を [Docusaurus](https://docusaurus.io/)サイトに埋め込むためのシンプルなReactコンポーネントです。
 
 
-## Installation
+# Installation
 
 1. install [`postscribe`](https://github.com/krux/postscribe) by npm.
     ```bash
@@ -37,29 +37,31 @@ A simple React component for embedding a post from **X (formerly known as Twitte
             └── index.js
     ```
 
-## Usage
+# Usage
 
 1. Import and use the component.
 
-```jsx
-import ReactTwitterEmbed from '@site/src/components/ReactTwitterEmbed';
-
-<ReactTwitterEmbed url="https://twitter.com/cubic9com/status/1588353378098483202" />
-```
-
-\[日本語\]
-
-1. コンポーネントをインポートして、使う。
-
 ````jsx
-```mdx
+```mdx-code-block
 import ReactTwitterEmbed from '@site/src/components/ReactTwitterEmbed';
 
 <ReactTwitterEmbed url="https://twitter.com/cubic9com/status/1588353378098483202" />
 ```
 ````
 
-## Props
+\[日本語\]
+
+1. コンポーネントをインポートして、使う。
+
+````jsx
+```mdx-code-block
+import ReactTwitterEmbed from '@site/src/components/ReactTwitterEmbed';
+
+<ReactTwitterEmbed url="https://twitter.com/cubic9com/status/1588353378098483202" />
+```
+````
+
+# Props
 
 |Prop|Type|Required|Description|
 |---|---|---|---|
@@ -71,7 +73,7 @@ import ReactTwitterEmbed from '@site/src/components/ReactTwitterEmbed';
 |---|---|---|---|
 |url|string|✅|Xの投稿のURL|
 
-## Notes
+# Notes
 
 - This component uses `useEffect` and dynamic import to ensure that Twitter's embedding script (`widgets.js`) is only loaded and executed on the client side.  
 
