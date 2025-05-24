@@ -7,11 +7,13 @@ export function ReactTwitterEmbed({ url }) {
   useEffect(() => {
     if (!url || !containerRef.current) return;
 
+    const replacedUrl = url.replace('x.com', 'twitter.com');
+
     import('postscribe')
       .then(({ default: postscribe }) => {
         const embedHtml = `
           <blockquote class="twitter-tweet">
-            <a href="${url}"></a>
+            <a href="${replacedUrl}"></a>
           </blockquote>
           <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         `;
